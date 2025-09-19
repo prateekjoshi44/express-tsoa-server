@@ -7,7 +7,12 @@ import { Get, Route, Tags } from "tsoa";
 @Route("auth")
 export class AuthController extends BaseController {
     @Get("login")
-    public async login(): Promise<string> {
-        return this.msgRes("Login successful").message;
+    public async login(): Promise<{ message: string }> {
+        return this.msgRes("Login successful");
+    }
+
+    @Get("register")
+    public async register(): Promise<{ message: string }> {
+        return this.msgRes("Registration successful");
     }
 }
