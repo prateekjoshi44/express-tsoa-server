@@ -6,12 +6,7 @@
     ],
     "spec": {
         "outputDirectory": "build",
-        "specVersion": 3,
-        "info": {
-            "title": "My Custom API Name",
-            "description": "Custom API documentation",
-            "version": "1.0.0"
-        }
+        "specVersion": 3
     },
     "routes": {
         "routesDir": "build"
