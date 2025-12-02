@@ -14,7 +14,7 @@ app.use(
         extended: true,
     })
 );
-app.use(json());
+app.use(express.json());
 
 // Override the title dynamically
 (swaggerDocument as any).info.title = "Express TSOA Server";
@@ -44,5 +44,31 @@ app.use((err: any, res: express.Response) => {
     });
 });
 
+
+// async function main() {
+//     // ... you will write your Prisma Client queries here
+//     // const product = await prisma.products.create({
+//     //     data: {
+//     //         name: "Sample Product",
+//     //         price: 19.99,
+//     //         description: "This is a sample product.",
+//     //     }
+//     // });
+//     // console.log(product)
+//     await prisma.products.deleteMany()
+
+//     const allProducts = await prisma.products.findMany()
+//     console.log(allProducts)
+// }
+
+// main()
+//     .then(async () => {
+//         await prisma.$disconnect()
+//     })
+//     .catch(async (e) => {
+//         console.error(e)
+//         await prisma.$disconnect()
+//         process.exit(1)
+//     })
 
 // Error handling
